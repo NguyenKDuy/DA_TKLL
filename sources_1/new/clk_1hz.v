@@ -5,7 +5,7 @@
 // 
 // Create Date: 10/15/2024 04:33:10 PM
 // Design Name: 
-// Module Name: clk_1hz
+// Module Name: clk_divider
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
