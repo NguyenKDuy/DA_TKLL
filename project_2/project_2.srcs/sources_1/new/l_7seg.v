@@ -28,7 +28,7 @@ clk_divider #(.DIV(28'd1)) clk_out(clk_in,clk_1hz);
 
 always@(clk_1hz)
 begin
-if(reg3 != 1111)
+	if(reg3 != 4'b1111)
 	led7_out <= {reg0,reg1,reg2,4'b1111};
 else led7_out <= {reg0,reg1,reg2,reg3};
 end
