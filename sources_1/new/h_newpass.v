@@ -49,17 +49,26 @@ output reg disable_cnt,
     case(counter)
     1'd1: begin
         reg1 <= value_4bit;
+        reg2 <= 4'b1111;
+        reg3 <= 4'b1111;
+        reg4 <= 4'b1111;
+        l_7seg(reg4,reg3,reg2,reg1, 7_seg_out);
         counter <= 1'd2;
     end
     1'd2: begin
         reg2 <= reg1;
         reg1 <= value_4bit;
+        reg3 <= 4'b1111;
+        reg4 <= 4'b1111;
+        l_7seg(reg4,reg3,reg2,reg1,7_seg_out);
         counter <= 1'd3;
     end
     1'd3:  begin
         reg3 <= reg2;
         reg2 <= reg1;
         reg1 <= value_4bit;
+        reg4 <= 4'b1111;
+        l_7seg(reg4,reg3,reg2,reg1,7_seg_out);
         counter <= 1'd4;
     end
     1'd4:   begin
@@ -67,6 +76,7 @@ output reg disable_cnt,
         reg3 <= reg2;
         reg2 <= reg1;
         reg1 <= value_4bit;
+        l_7seg(reg4,reg3,reg2,reg1,7_seg_out);
         end
     endcase
     end
